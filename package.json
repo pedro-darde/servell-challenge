@@ -1,0 +1,38 @@
+{
+  "name": "serverless-challenge",
+  "version": "1.0.0",
+  "description": "Api para a empresa stefanini celular 37",
+  "main": "index.js",
+  "scripts": {
+    "sls": "sls offline",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedro-darde/serverless-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedro-darde/serverless-challenge/issues"
+  },
+  "homepage": "https://github.com/pedro-darde/serverless-challenge#readme",
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "lambda-api": "^0.11.2"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.1",
+    "@types/aws-lambda": "^8.10.86",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@types/serverless": "^1.78.39",
+    "jest": "^27.4.3",
+    "serverless": "^2.68.0",
+    "serverless-offline": "^8.3.1",
+    "serverless-plugin-typescript": "^2.1.0",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  }
+}
