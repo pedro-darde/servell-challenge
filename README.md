@@ -1,7 +1,7 @@
 # serverless-challenge
 
 
-#Como rodar a api 
+# Como rodar a api 
 * Dê um git clone do projeto para a máquina que deseja rodar
 * Rode o comando `npm run up`, este comando ficará responsável por rodar o docker do projeto e colocar a api pra rodar localmente(no docker)
 * Caso não seja definida uma porta para api no config env.ts a porta padrão será a 5050
