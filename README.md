@@ -6,7 +6,7 @@
 * Rode o comando `npm install`
 * Em seguida o comando `npm run up`, este comando ficará responsável por rodar o docker do projeto e colocar a api pra rodar localmente(no docker)
 * Caso não seja definida uma porta para api no config env.ts a porta padrão será a 5050
-* Após isso é possível fazer os testes dos endpoints da api no postman
+* Após alguns segundos, enquanto o docker instala as depêndencias e etc, é possível fazer os testes dos endpoints da api no postman
 
 ### SE NÃO QUISER USAR O DOCKER
 Caso não se queira usar o docker, tem como rodar a api local, só que para isso é necessário que tenha o MongoDB Atlas instalado na máquina
@@ -14,7 +14,7 @@ Os passos mudam um pouco, tornando-se necessário rodar um comando a mais, sendo
 * `npm install`
 * `npm run dev`
 * Caso não seja definida uma porta para api no config env.ts a porta padrão será a 5050
-* Após alguns segundos, enquanto o docker instala as depêndencias e etc, é possível fazer os testes dos endpoints da api no postman
+* Apos isso é possível fazer os testes dos endpoints da api no postman
 
 
 # Funcionalidades da API
