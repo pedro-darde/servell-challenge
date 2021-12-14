@@ -1,6 +1,6 @@
-import { AddUserRepository } from "@src/data/protocols/db/users/add-user-repository";
-import { UserModel } from "@src/domain/models/user-result";
-import { AddUser, AddUserModel } from "@src/domain/usecase/add-user";
+import {AddUser, AddUserModel} from "../../../../domain/usecase/add-user";
+import {AddUserRepository} from "../../../protocols/db/users/add-user-repository";
+import {UserModel} from "../../../../domain/models/user-result";
 
 export class DbAddUser implements AddUser {
   private readonly addUserRepository: AddUserRepository;

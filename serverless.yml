@@ -10,13 +10,13 @@ functions:
   hello:
     handler: src/main/hello.handler
     events:
-      - http: 
+      - http:
           path: serverlessSetup/hello
           method: get
   goodbye:
-    handler: src/functions/goodbye.handler
+    handler: src/main/goodbye.handler
     events:
-      - http: 
+      - http:
           path: serverlessSetup/goodbye
           method: post
 
