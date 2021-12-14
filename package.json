@@ -1,13 +1,17 @@
 {
   "name": "serverless-challenge",
   "version": "1.0.0",
-  "description": "Api para a empresa stefanini celular 37",
+  "description": "Api para a empresa stefanini celula 37",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/main/server.js",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/main/index.js",
+    "up": "npm run build && docker-compose up -d",
+    "down": "docker-compose down",
     "sls": "sls offline",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/main/index.ts"
-
   },
   "repository": {
     "type": "git",
@@ -23,7 +27,9 @@
     "aws-lambda": "^1.0.7",
     "express": "^4.17.1",
     "lambda-api": "^0.11.2",
-    "mongodb": "^4.2.2"
+    "mongodb": "^4.2.2",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^2.1.1",
