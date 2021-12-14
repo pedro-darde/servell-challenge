@@ -12,4 +12,8 @@ export class DbLoadUsers implements LoadUsers {
     async load(): Promise<UserModel[]> {
         return await this.loadUsersRepository.load();
     }
+
+    async loadById(id: string): Promise<UserModel | undefined> {
+        return await this.loadUsersRepository.loadById(id);
+    }
 }

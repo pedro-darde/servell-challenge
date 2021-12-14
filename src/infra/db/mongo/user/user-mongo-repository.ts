@@ -40,4 +40,12 @@ export class UserMongoRepository implements AddUserRepository, EditUserRepositor
         await userCollection.deleteOne({_id: new ObjectId(id)})
     }
 
+    async loadById(id: string): Promise<UserModel | undefined> {
+        const userCollection = await MongoHelper.getCollection('users')
+        const account = await userCollection.findOne({_id: new ObjectId(id)})
+
+        if (account._id) {
+            return MongoHelper.map(account)
+        }
+    }
 }

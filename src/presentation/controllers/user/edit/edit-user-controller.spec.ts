@@ -2,6 +2,7 @@ import {UserModel} from "../../../../domain/models/user-result";
 import {EditUserController} from "./edit-user-controller";
 import {serverError} from "../../../../infra/helpers/http-helper";
 import {EditUser, UserEditModel} from "../../../../domain/usecase/edit-user";
+import {LoadUsers} from "../../../../domain/usecase/load-users";
 
 
 const makeEditUserStub = (): EditUser => {
@@ -14,21 +15,38 @@ const makeEditUserStub = (): EditUser => {
     return new EditUserStub()
 }
 
+const makeLoadUserByIdStub = (): LoadUsers => {
+    class LoadUserByIdStub implements LoadUsers {
+        async loadById(id: string): Promise<UserModel | undefined> {
+            return null
+        }
+
+        load(): Promise<UserModel[]> {
+            return Promise.resolve([]);
+        }
+    }
+
+    return new LoadUserByIdStub()
+}
+
 interface SutTypes {
     editUserStub: EditUser,
+    loadUserByIdStub: LoadUsers
     sut: EditUserController
 }
 
 const makeSut = (): SutTypes => {
     const editUserStub = makeEditUserStub()
-    const sut = new EditUserController(editUserStub);
+    const loadUserByIdStub = makeLoadUserByIdStub()
+    const sut = new EditUserController(editUserStub, loadUserByIdStub);
 
     return {
         editUserStub,
+        loadUserByIdStub,
         sut
     }
-
 }
+
 describe('EditUserController', () => {
     test('Should call edit user with correct values', async () => {
         const {sut, editUserStub} = makeSut()

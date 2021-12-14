@@ -6,10 +6,12 @@ import {EditUserController} from "../../../../../presentation/controllers/user/e
 import {DbEditUser} from "../../../../../data/usecases/user/edit/db-edit-user";
 
 export const makeEditUserController = (): Controller => {
-    const editUserRepository = new UserMongoRepository()
-    const dbEditUser = new DbEditUser(editUserRepository)
-    const controller = new EditUserController(dbEditUser)
 
+    const editUserRepository = new UserMongoRepository()
+
+    const dbEditUser = new DbEditUser(editUserRepository)
+
+    const controller = new EditUserController(dbEditUser, editUserRepository)
     const logMongoRepository = new LogMongoRepository()
 
     return new LogControllerDecorator(controller, logMongoRepository)

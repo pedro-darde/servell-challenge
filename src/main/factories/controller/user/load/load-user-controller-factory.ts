@@ -7,9 +7,8 @@ import {LoadUsersController} from "../../../../../presentation/controllers/user/
 
 export const makeLoadUserController = (): Controller => {
     const loadUserRepository = new UserMongoRepository()
-    const dbAddUser = new DbLoadUsers(loadUserRepository)
-    const controller = new LoadUsersController(dbAddUser)
-
+    const dbLoadUsers = new DbLoadUsers(loadUserRepository)
+    const controller = new LoadUsersController(dbLoadUsers)
     const logMongoRepository = new LogMongoRepository()
 
     return new LogControllerDecorator(controller, logMongoRepository)

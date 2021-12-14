@@ -11,7 +11,6 @@ export class DbEditUser implements EditUser {
 
     async edit(id: string, accountEdit: UserEditModel): Promise<UserModel> {
         const account = await this.editUserRepository.edit(id, accountEdit)
-
         return account
     }
 }

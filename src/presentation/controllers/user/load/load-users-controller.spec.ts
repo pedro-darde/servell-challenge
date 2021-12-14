@@ -11,6 +11,10 @@ const makeLoadUsersStub = (): LoadUsers => {
         async load(): Promise<UserModel[]> {
             return [{nome: 'any_nome', cargo: 'any_cargo', idade: 12, id: 'any_id'}]
         }
+
+        loadById(id: string): Promise<UserModel | undefined> {
+            return Promise.resolve(undefined);
+        }
     }
 
     return new LoadUsersStub()
