@@ -3,7 +3,8 @@
 
 # Como rodar a api 
 * Dê um git clone do projeto para a máquina que deseja rodar
-* Rode o comando `npm run up`, este comando ficará responsável por rodar o docker do projeto e colocar a api pra rodar localmente(no docker)
+* Rode o comando `npm install`
+* Em seguida o comando `npm run up`, este comando ficará responsável por rodar o docker do projeto e colocar a api pra rodar localmente(no docker)
 * Caso não seja definida uma porta para api no config env.ts a porta padrão será a 5050
 * Após isso é possível fazer os testes dos endpoints da api no postman
 
