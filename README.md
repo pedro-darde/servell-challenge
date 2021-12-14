@@ -14,7 +14,7 @@ Os passos mudam um pouco, tornando-se necessário rodar um comando a mais, sendo
 * `npm install`
 * `npm run dev`
 * Caso não seja definida uma porta para api no config env.ts a porta padrão será a 5050
-* Após isso é possível fazer os testes dos endpoints da api no postman
+* Após alguns segundos, enquanto o docker instala as depêndencias e etc, é possível fazer os testes dos endpoints da api no postman
 
 
 # Funcionalidades da API
